@@ -1,0 +1,17 @@
+sudo: required
+
+language: go
+
+services:
+  - docker
+
+go:
+  - 1.11
+
+go_import_path: github.com/secretsengine/provocation
+
+env:
+  - GO111MODULE=on
+
+script:
+  - go test ./...
